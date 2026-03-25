@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Vendas Cozinha da Gabriela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <section id="auth-view" class="auth-view">
+      <div class="auth-brand">
+        <img src="assets/logo-laranja.png" alt="Logo Cozinha da Gabriela" class="brand-logo" />
+        <div>
+          <p class="eyebrow">Portal de Vendas</p>
+          <h1>Cozinha da Gabriela</h1>
+          <p class="auth-subtitle">
+            Plataforma de gestão comercial para vendedores parceiros, com vendas, clientes,
+            recebimentos, pagamentos, informativos e visão estratégica da operação.
+          </p>
+        </div>
+      </div>
+
+      <div class="auth-card card">
+        <div class="auth-single-tab">
+          <span class="switch-btn active">Entrar</span>
+        </div>
+
+        <div id="login-panel" class="auth-panel">
+          <h2>Entrar na plataforma</h2>
+          <div class="field-group">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" placeholder="seuemail@exemplo.com" />
+          </div>
+          <div class="field-group">
+            <label for="login-password">Senha</label>
+            <input id="login-password" type="password" placeholder="Sua senha" />
+          </div>
+          <button id="btn-login" class="btn btn-primary btn-full">Entrar</button>
+          <button id="btn-forgot-password" class="btn btn-ghost btn-full" type="button">Esqueci minha senha</button>
+          <p class="small-text auth-note">Novos acessos são criados apenas pela administração da Cozinha da Gabriela.</p>
+        </div>
+
+        <p id="auth-message" class="status-message"></p>
+      </div>
+    </section>
+
+    <section id="app-view" class="app-view hidden">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img src="assets/logo-laranja.png" alt="Logo" class="sidebar-logo" />
+          <div>
+            <p class="eyebrow">Portal de Vendas</p>
+            <h2>Cozinha da Gabriela</h2>
+          </div>
+        </div>
+
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+
+        <div class="sidebar-footer">
+          <div>
+            <strong id="sidebar-user-name">Usuário</strong>
+            <p id="sidebar-user-role">Perfil</p>
+          </div>
+          <button id="btn-logout" class="btn btn-ghost btn-full">Sair</button>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <header class="topbar card">
+          <div>
+            <p class="eyebrow">Painel principal</p>
+            <h1 id="view-title">Dashboard</h1>
+          </div>
+          <div class="topbar-meta">
+            <span id="today-label"></span>
+            <span id="platform-badge" class="badge">0/20 vendedores ativos</span>
+          </div>
+        </header>
+
+        <section id="status-view" class="status-view hidden card"></section>
+        <section id="content-view" class="content-view"></section>
+      </main>
+    </section>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
