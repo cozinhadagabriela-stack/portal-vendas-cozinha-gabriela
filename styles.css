@@ -339,6 +339,7 @@ img {
   display: grid;
   gap: 18px;
   align-content: start;
+  min-width: 0;
 }
 
 .topbar {
@@ -377,6 +378,7 @@ img {
 .content-view {
   display: grid;
   gap: 18px;
+  min-width: 0;
 }
 
 .status-view {
@@ -430,6 +432,11 @@ img {
   gap: 18px;
 }
 
+.split-grid > *,
+.metrics-grid > * {
+  min-width: 0;
+}
+
 .chart-box {
   padding: 18px;
   min-height: 360px;
@@ -441,7 +448,10 @@ img {
 }
 
 .table-wrapper {
-  overflow: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 table {
