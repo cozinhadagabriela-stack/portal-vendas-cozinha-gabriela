@@ -1,5 +1,5 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyC-NztsdPM44KD8q_reaFKQjIfButyz85Q',
+  apiKey: 'AIzaSyC-NztsdPM44KD8q_reaFKQjlfButyz85Q',
   authDomain: 'portal-vendas-coz-da-gabriela.firebaseapp.com',
   projectId: 'portal-vendas-coz-da-gabriela',
   storageBucket: 'portal-vendas-coz-da-gabriela.firebasestorage.app',
