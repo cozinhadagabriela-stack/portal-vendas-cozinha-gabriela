@@ -301,7 +301,8 @@ img {
 }
 
 .sidebar-nav {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -312,6 +313,35 @@ img {
   padding: 14px 16px;
   border-radius: 16px;
   font-weight: 700;
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-sales"] {
+  order: 1;
+  margin: 4px 0 18px;
+  background: rgba(215, 90, 18, 0.06);
+  border: 1px solid rgba(215, 90, 18, 0.14);
+  box-shadow: 0 10px 18px rgba(215, 90, 18, 0.08);
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-dashboard"] {
+  order: 2;
+  margin-top: 18px;
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-clients"] {
+  order: 3;
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-purchases"] {
+  order: 4;
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-finance"] {
+  order: 5;
+}
+
+.sidebar-nav .nav-btn[data-view="vendor-notices"] {
+  order: 6;
 }
 
 .nav-btn.active,
@@ -339,7 +369,6 @@ img {
   display: grid;
   gap: 18px;
   align-content: start;
-  min-width: 0;
 }
 
 .topbar {
@@ -378,7 +407,6 @@ img {
 .content-view {
   display: grid;
   gap: 18px;
-  min-width: 0;
 }
 
 .status-view {
@@ -432,11 +460,6 @@ img {
   gap: 18px;
 }
 
-.split-grid > *,
-.metrics-grid > * {
-  min-width: 0;
-}
-
 .chart-box {
   padding: 18px;
   min-height: 360px;
@@ -448,10 +471,7 @@ img {
 }
 
 .table-wrapper {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 table {
@@ -492,11 +512,6 @@ tr:hover td {
   background: var(--primary-soft);
   color: var(--primary);
   font-weight: 700;
-}
-
-.btn-inline-danger {
-  background: #fde8e4;
-  color: #b2441f;
 }
 
 .notice-list {
